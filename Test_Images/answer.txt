@@ -1,0 +1,69 @@
+label-1_5-blasting-agent-notext.png
+top: orange
+bottom: orange
+class: 1
+text: (none)
+symbol: 1.5
+
+label-5_1-oxidizer.png
+top: yellow
+bottom: yellow
+class: 5.1
+text: OXIDIZER
+symbol: Oxidizer
+
+label-6-poison-inhalation-hazard.png
+top: white
+bottom: white
+class: 6
+text: INHALATION HAZARD	
+symbol: Skull and crossbones on black diamond
+
+label-7-radioactive-i-notext.png
+top: white
+bottom: white
+class: 7
+text: (none)
+symbol: Radioactive
+
+label-8-corrosive.png
+top: white
+bottom: black
+class: 8
+text: CORROSIVE
+symbol: Corrosive
+
+placard-2-non-flammable-gas.png
+top: green
+bottom: green
+class: 2
+text: NON-FLAMMABLE GAS
+symbol: Gas cylinder
+
+placard-2-oxygen-notext-noclass.png
+top: yellow
+bottom: yellow
+class: (none)
+text: (none)
+symbol: Oxidiser
+
+placard-4-dangerous-when-wet.png
+top: blue
+bottom: blue
+class: 4
+text: DANGEROUS WHEN WET
+symbol: Flame
+
+placard-5_2-organic-peroxide.png
+top: red
+bottom: yellow
+class: 5.2
+text: ORGANIC PEROXIDE
+symbol: Flame
+
+placard-8-corrosive-notext.png
+top: white
+bottom: black
+class: 8
+text: (none)
+symbol: Corrosive

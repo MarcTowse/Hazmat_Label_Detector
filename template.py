@@ -7,8 +7,7 @@ def match(image, templates, templateType):
 	#default variables
 	bestMatch = 0
 	bestMatchName = ''
-	
-	########   1   #########
+
 	#depending on what type required they had different properties needed for calculation
 	if templateType == 'Symbol':
 		crop_img = image[20:250, 120:380]
@@ -38,7 +37,6 @@ def match(image, templates, templateType):
 		found = None
 	 
 		# loop over the scales of the image
-		########   2   #########
 		for scale in np.linspace(0.2, 1.5, 30)[::-1]:
 			# resize the image according to the scale, and keep track
 			# of the ratio of the resizing
@@ -63,7 +61,6 @@ def match(image, templates, templateType):
 			if found is None or maxVal > found[0]:
 				found = (maxVal, maxLoc, r)
 		
-		########   3   #########		
 		#if this was the first template set it as the best match
 		if a == 0:
 			bestMatch = found[0]

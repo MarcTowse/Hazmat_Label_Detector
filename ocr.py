@@ -13,8 +13,6 @@ words = ['CORROSIVE','RADIOACTIVE I','RADIOACTIVE II', 'RADIOACTIVE III', 'RADIO
 	'SPONTANEOUSLY COMBUSTIBLE', 'COMBUSTIBLE', 'FLAMMABLE', 'FUEL OIL', 'GASOLINE', 'TOXIC']
 
 def ocr(image):
-	
-	#########   1   ##########
 	#preprocessing to help tesseract with OCR
 	grey = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 	grey = cv2.threshold(grey, 0, 255,cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
@@ -33,7 +31,6 @@ def ocr(image):
 	#remove new line characters
 	text = text.replace('\n',' ')
 	
-	#########   2   ##########
 	#compare each of the OCR'd words with the database 
 	newText = text
 	bestMatch = 0

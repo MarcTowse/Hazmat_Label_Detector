@@ -7,7 +7,6 @@ def order_points(pts):
 	#create the new shuffled points array
 	rect = np.zeros((4, 2), dtype = "float32")
 
-	########   1   ########	
 	b = 0
 	#for loop will first do the x values and then the y values
 	for a in (0,1):
@@ -54,8 +53,7 @@ def four_point_transform(image, pts):
 		[0, maxHeight - 1],
 		[maxWidth - 1, maxHeight - 1],
 		[0, 0]], dtype = "float32")
-		
- 	########   2   ########
+
 	# compute the perspective transform matrix and then apply it
 	M = cv2.getPerspectiveTransform(rect, dst)
 	warped = cv2.warpPerspective(image, M, (maxWidth, maxHeight))
@@ -78,8 +76,7 @@ def rotateAndScale(img, scaleFactor = 1.5, degreesCCW = -45):
     (tx,ty) = ((newX-oldX)/2,(newY-oldY)/2)
     M[0,2] += tx 
     M[1,2] += ty
-    
-	########   3   ########
+
 	#rotate the image while maintaining its full size
     rotatedImg = cv2.warpAffine(img, M, dsize=(int(newX),int(newY)))
     return rotatedImg

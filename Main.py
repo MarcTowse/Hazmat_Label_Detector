@@ -7,12 +7,10 @@ from diamondDetect import diamondDetect
 from template import match
 import glob
 
-##########  1  #########
 #Find the templates for template matching
 templatesSymbol = [cv2.imread(file) for file in glob.glob("templates/*.png")]
 templatesClass = [cv2.imread(file) for file in glob.glob("templates2/*.png")]
-
-##########  2  #########	
+	
 #declare the types of files we want and also where we will store them
 photoType = ['*.jpg','*.png','*.JPG','*.PNG']
 images = []
@@ -21,11 +19,11 @@ images = []
 for end in photoType:
 	for file in glob.glob(end):
 		images.append(file)
-##########  3  #########
+
 #Sort the list alphabetically
 images.sort()
 
-##########  4  #########
+
 for image in images:
 	#print the image name 
 	print(image,)

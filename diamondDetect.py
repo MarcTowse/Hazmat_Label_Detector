@@ -4,12 +4,10 @@ from fourPoint import warp
 import re
 
 def diamondDetect(img):
-	##########  1  #########
 	#create a default coordinates incase no diamond is found
 	height,width, _ = img.shape
 	pts_src = [[[height//2, 0]],[[0,width//2]],[[height//2,width]],[[height,width//2]]]
 
-	##########  2  #########
 	#convert the image to grey
 	grey = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 	#apply a bilateral filter
@@ -24,7 +22,6 @@ def diamondDetect(img):
 	a, contours, h = cv2.findContours( edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE )
 	
 
-	##########  3  #########
 	#for each contour calulate if its possible its a diamond
 	for cont in contours:
 		#ignore small contours
@@ -36,8 +33,6 @@ def diamondDetect(img):
 				pts_src = np.array( approx, np.float32 )
 			else : pass
 
-
-	##########  4  #########
 	l = []
 	#convert pts_src into a string and make a = to it
 	a = str(pts_src)
